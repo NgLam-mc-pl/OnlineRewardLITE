@@ -1,0 +1,15 @@
+name: OnlineReward
+description: $description
+version: '$version'
+
+main: me.nglam2911.onlineReward.OnlineReward
+api-version: '1.21'
+load: POSTWORLD
+
+authors: [ NgLam2911 ]
+website: github.com/NgLam2911
+
+permissions:
+  onlinereward.default:
+    description: Allows the player to receive online rewards (default).
+    default: true

@@ -1,0 +1,20 @@
+# Khoảng thời gian delay giữa các lần nhận. Hỗ trợ giờ (h), phút (m) giây (s). Ví dụ: 1h23m, 45m, 2h, 30s, v.v.
+delay: "10m"
+# Phần thưởng cơ bản cho mỗi lần nhận.
+#
+rewards:
+  # Quyền hạn cần có để nhận phần thưởng này. Nếu để trống, tất cả người chơi đều có thể nhận được phần thưởng này.
+  - permission: "onlinereward.default"
+    # Các lệnh sẽ được thực thi khi người chơi nhận phần thưởng này.
+    # Sử dụng {player} để đại diện cho tên người chơi.
+    # Sử dụng {times} để đại diện cho lần nhận phần thưởng của người đó (bắt đầu từ 1).
+    commands:
+      - "give %player% diamond 1"
+      - "give %player% dirt %times%"
+    # Tin nhắn sẽ được gửi đến người chơi khi họ nhận phần thưởng này. {player} và {times} cũng có thể được sử dụng trong tin nhắn.
+    message: "Bạn đã nhận được phần thưởng online lần thứ %times%!"
+  - permission: "onlinereward.vip"
+    commands:
+      - "give %player% diamond 5"
+      - "give %player% gold_ingot %times%"
+    message: "Bạn đã nhận được phần thưởng VIP online lần thứ %times%!"
